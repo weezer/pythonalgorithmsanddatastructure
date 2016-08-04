@@ -1,4 +1,4 @@
-@TODO
+#TODO finish the shell sort
 def shellSort(alist):
     gap = len(alist) // 2
     while gap > 0:
