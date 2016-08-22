@@ -55,3 +55,6 @@ class Celsius3:
 if __name__ == "__main__":
     a = Celsius3(100)
     print a.to_farenhite()
+
+
+print "in celsius"

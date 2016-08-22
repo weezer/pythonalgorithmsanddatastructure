@@ -1,3 +1,6 @@
+import importlib
+# import
+
 class Node:
     def __init__(self, item):
         self.data = item
@@ -14,3 +17,7 @@ class Node:
 
     def setNext(self, newnext):
         self.next = newnext
+
+print "in node"
+
+importlib.import_module("tree.importtest")
