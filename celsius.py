@@ -2,7 +2,7 @@ class Celsius:
     def __init__(self, temp = 0):
         self.set_temperature(temp)
 
-    def to_farenhite(self):
+    def to_fahrenheit(self):
         return self.get_temperature() * 1.8 + 32
 
     def get_temperature(self):
@@ -15,46 +15,46 @@ class Celsius:
 
 
 class Celsius2:
-    def __init__(self, temp = 0):
-        self._temp = temp
+    def __init__(self, temperature = 0):
+        self.temperature = temperature
 
-    def to_farenhite(self):
-        return self.temp * 1.8 + 32
+    def to_fahrenheit(self):
+        return (self.temperature * 1.8) + 32
 
     def get_temperature(self):
-        print "get value"
-        return self._temp
+        print("Getting value")
+        return self._temperature
 
-    def set_temperature(self, temp):
-        if temp < -237:
-            raise ValueError("the celsius temp should not be lower than -237")
-        print "set value"
-        self._temp = temp
+    def set_temperature(self, value):
+        if value < -273:
+            raise ValueError("Temperature below -273 is not possible")
+        print("Setting value")
+        self._temperature = value
 
-    temp = property(get_temperature, set_temperature)
+    temperature = property(get_temperature,set_temperature)
 
 class Celsius3:
-    def __init__(self, temp = 0):
-        self._temp = temp
+    def __init__(self, temperature = 0):
+        self._temperature = temperature
 
-    def to_farenhite(self):
-        return self.temp * 1.8 + 32
+    def to_fahrenheit(self):
+        return (self.temperature * 1.8) + 32
 
     @property
-    def temp(self):
-        print "get value"
-        return self._temp
+    def temperature(self):
+        print("Getting value")
+        return self._temperature
 
-    @temp.setter
-    def set_temperature(self, temp):
-        if temp < -237:
-            raise ValueError("the celsius temp should not be lower than -237")
-        print "set value"
-        self._temp = temp
+    @temperature.setter
+    def temperature(self, value):
+        if value < -273:
+            raise ValueError("Temperature below -273 is not possible")
+        print("Setting value")
+        self._temperature = value
 
 if __name__ == "__main__":
-    a = Celsius3(100)
-    print a.to_farenhite()
+    a = Celsius(-277)
+    print a.to_fahrenheit()
 
 
 print "in celsius"
